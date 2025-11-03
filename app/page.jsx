@@ -132,6 +132,7 @@ const Home = () => {
 
   return (
     <>
+      {/* === HEADING === */}
       <h1 className="welcome-text text-center text-[#ffc300] text-2xl sm:text-3xl md:text-4xl font-bold my-6">
         <span className="typewriter">
           Welcome to the World of Legendary Cars (QBM)
@@ -169,8 +170,13 @@ const Home = () => {
             className="rounded-2xl w-full"
           >
             {filteredCars.map((car, i) => (
-              <SwiperSlide key={i}>
-                <Card name={car.name} img={car.img} specs={car.specs} />
+              <SwiperSlide
+                key={i}
+                className="flex justify-center items-center"
+              >
+                <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]">
+                  <Card name={car.name} img={car.img} specs={car.specs} />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
