@@ -251,3 +251,47 @@ body {
     letter-spacing: 1px;
   }
 } 
+/* === Swiper Navigation Styling Fix === */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffc300 !important; /* Gold to match theme */
+  transition: all 0.3s ease;
+}
+
+/* smaller and centered for mobile */
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #ffc300 !important;
+    transform: scale(0.6);
+    top: 45%;
+  }
+}
+
+/* hover glow on desktop */
+@media (min-width: 769px) {
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    text-shadow: 0 0 10px rgba(255, 195, 0, 0.6);
+    transform: scale(1.1);
+  }
+}
+
+/* Optional: make them subtle circles for elegance */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+
+/* shrink icons for mobile */
+@media (max-width: 768px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 14px !important;
+    padding: 5px 6px;
+  }
+}
